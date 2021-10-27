@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+    body {
+      background-image: url(https://dl.dnzdns.com/v/MXd29fABF0418);
+      background-size: cover;
+      background-position: center top;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10vh;
+    }
+
+    #btn-participar {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1vh;
+      width: 200px;
+      padding: 16px;
+    }
+
+    section {
+      margin: 16px;
+      height: 150px;
+      text-align: center;
+    }
+
+    h2 {
+      border-bottom: 2px solid;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <section>
+      <h2>Número de participantes</h2>
+      <p id="num-participantes"></p>
+    </section>
+    <section>
+      <h2>Idade média dos participantes</h2>
+      <p id="idade-media"></p>
+    </section>
+    <section>
+      <h2>Número de satisfeitos</h2>
+      <p id="num-satisfeitos"></p>
+    </section>
+  </div>
+  <button id="btn-participar" onclick="participar()">Participar</button>
+  <script type="text/javascript" src="participantes.js"></script>
+</body>
+
+</html>
