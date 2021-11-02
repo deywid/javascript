@@ -12,7 +12,6 @@ function recarregar() {
   superior = 0
   numero100 = 0
   distribuiNumeros()
-  modificaBG()
 }
 
 function distribuiNumeros() {
@@ -26,6 +25,7 @@ function distribuiNumeros() {
       inferior++
     }
   }
+  modificaBG()
 }
 
 function modificaBG() {
@@ -43,14 +43,3 @@ function modificaBG() {
     document.body.style.backgroundColor = "transparent"
   }
 }
-
-/*
-Crie um programa que cria 1000 numeros aleátorios entre 1 e 1000,
-sempre que a quantidade de números de 501 a 1000 for maior que a quantidade de inferiores,
-o background da página deve ser esta url: https://picsum.photos/200/300
-quando for inferior o background deve ser: https://via.placeholder.com/500
-porem quando o numero 100 aparecer apenas uma vez o background deve ser "orange"
-e o 100 aparecer mais de uma vez  o background deve ser "black"
-
-por fim deve haver um botão que recarrega essa lógica sem recarregar a página
-*/
