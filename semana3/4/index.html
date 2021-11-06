@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Caculadora de descontos</title>
+</head>
+
+<body>
+  <section class="container">
+    <form action="">
+      <div class="main-content">
+        <div class="left-content">
+          <h2>Calcular descontos</h2>
+          <label for="valor">valor total:</label>
+          <input type="number" name="valor" id="total" autocomplete="off">
+          <label for="desconto">% desconto:</label>
+          <input type="number" name="desconto" id="desconto" autocomplete="off">
+          <input type="button" value="Calcular" id="btn-calcular" onclick="calcular()">
+        </div>
+        <div class="right-content">
+          <h2>Resumo</h2>
+          <h4 class="resumo">Total</h4>
+          <p id="valor-total"></p>
+          <h4 class="resumo">Total com desconto</h4>
+          <p id="total-desconto"></p>
+          <h4 class="resumo">Desconto de</h4>
+          <p id="valor-desconto"></p>
+        </div>
+      </div>
+    </form>
+  </section>
+</body>
+<script src="index.js"></script>
+
+</html>
