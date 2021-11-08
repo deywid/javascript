@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Formulário</title>
+</head>
+<body>
+  <header class="header">
+    <h2>Cadastrar endereços</h2>
+  </header>
+  <section class="container">
+    <form action="#">
+      <div class="form-content">
+        <div class="form-div">
+          <div class="colunas">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+          </div>
+          <div class="colunas">
+            <label for="sobrenome">Sobrenome</label>
+            <input type="text" name="sobrenome" id="sobrenome">
+          </div>
+        </div>
+        <div class="form-div">
+          <div class="colunas">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="exemple@email.com" id="email">
+          </div>
+          <div class="colunas">
+            <label for="tel">Telefone</label>
+            <input type="tel" name="tel" maxlength="14" placeholder="(11)91234-5678" id="tel">
+          </div>
+        </div>
+        <div class="div-enderecos">
+          <label for="endereco">Endereço</label>
+          <input type="text" name="endereco" id="endereco" class="enderecos">
+        </div>
+      </div>
+      <div>
+        <input type="button" value="Adicionar endereço" onclick="addEndereco()" id="btn-add-endereco">
+      </div>
+    </form>
+  </section>
+</body>
+<script src="index.js"></script>
+</html>
