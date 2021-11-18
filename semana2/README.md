@@ -1,4 +1,4 @@
-## Lista de exercícios - 2ª semana - JavaScript
+## Lista de exercícios - 2ª semana - Javascript
 
 ### [Ex 1 - Gerador de história](https://deywid.github.io/javascript/semana2/1historia/) 
 #### Criar uma sequência de diálogos com as seguintes perguntas:
