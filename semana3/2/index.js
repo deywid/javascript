@@ -1,5 +1,5 @@
 document.getElementById('btn-validar').addEventListener('click', () => {
-  var num = parseFloat(document.getElementById('numero').value)
+  const num = parseFloat(document.getElementById('numero').value)
   if (ehInteiro(num)) {
     if (ehPar(num)) {
       document.querySelector('.resultado').innerHTML = `O numero ${num} é PAR`
@@ -17,7 +17,6 @@ function ehPar(num) {
   }
   return false;
 }
-
 
 function ehInteiro(num) {
   if (Number.isInteger(num)) {

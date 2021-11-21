@@ -1,6 +1,6 @@
-var num = []
-var ultimoOperador = ""
-var resultado = ""
+const num = []
+let ultimoOperador = ""
+let resultado = ""
 
 function validaEntrada(operador) {
   if (operador === '') {

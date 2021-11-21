@@ -1,5 +1,5 @@
 document.getElementById('btn-validar').addEventListener('click', () => {
-  var num = parseFloat(document.getElementById('numero').value)
+  const num = parseFloat(document.getElementById('numero').value)
   if (ehNatural(num)) {
     if (ehPrimo(num)) {
       document.querySelector('.resultado').innerHTML = `O numero ${num} é PRIMO`

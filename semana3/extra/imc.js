@@ -1,6 +1,6 @@
 document.querySelector('#btn-calcular').addEventListener('click', function () {
-  let peso = parseFloat(document.getElementById('peso').value)
-  let altura = parseFloat(document.getElementById('altura').value)
+  const peso = parseFloat(document.getElementById('peso').value)
+  const altura = parseFloat(document.getElementById('altura').value)
   if (validaEntrada(peso, altura)) {
     calcularIMC(peso, altura)
   } else {
@@ -9,7 +9,7 @@ document.querySelector('#btn-calcular').addEventListener('click', function () {
 })
 
 function calcularIMC(peso, altura) {
-  let resultado = peso / (altura ** 2)
+  const resultado = peso / (altura ** 2)
   return resultadoIMC(resultado.toFixed(2))
 }
 
