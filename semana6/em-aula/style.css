@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ 
+}
+
+.display-content {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  padding: 16px;
+}
