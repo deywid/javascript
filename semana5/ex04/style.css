@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body{
+  font-family: Verdana, helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+nav {
+  display: flex;
+  justify-content: left;
+  background-color: #ddd;
+  padding: 4px;
+}
+
+.menu {
+  display: flex;
+  gap: 16px;
+  font-size: .9em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.menu li{
+  position: relative;
+  float: left;
+  width: 120px;
+}
+
+.menu li a {
+  color: #333; 
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+}
+
+.menu li a:hover {
+  background: #333;
+  color: #fff;
+  text-shadow: 0px 0px 5px #ddd;
+}
+
+.menu li ul {
+  position: absolute;
+  background-color:#fff;
+  display: none;
+}
+
+.menu li:hover ul, 
+.menu li.over ul {
+  display: block;
+}
+
+.menu li ul li {
+  border: 1px solid #ddd;
+  display: block;
+  width: 200px;
+}
+
+.form-container{
+  padding: 24px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form input {
+  width: 300px;
+  margin-bottom: 16px;
+}
+
+.consulta-endereco {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+th,
+tr,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}

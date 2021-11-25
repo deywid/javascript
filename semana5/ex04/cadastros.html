@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer type='module' src="cadastros.js"></script>
+  <title>Início :: Cadastros</title>
+</head>
+
+<body>
+  <nav>
+    <ul class="menu">
+      <li>
+        <a href="index.html">Início</a>
+      </li>
+      <li>
+        <a href="#">Cadastros</a>
+        <ul>
+          <li><a href="cadastros.html">Endereço de clientes</a></li>
+          <li><a href="cadastros.html">Endereço de fornecedores</a></li>
+          <li><a href="cadastros.html">Endereço de lojas</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Consultas</a>
+        <ul>
+          <li id="consulta-endereco"><a href="consultas.html">Endereços</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div class="form-container">
+    <form class='form' id="cadastros-cli">
+      <!--<label for="name">Cliente</label>
+    <input type="text" name="cliente"> -->
+      <label for="logradouro">Logradouro</label>
+      <input type="text" name="logradouro" id="logradouro">
+      <label for="numero">Número</label>
+      <input type="text" name="numero" id="numero">
+      <label for="cidade">Cidade</label>
+      <input type="text" name="cidade" id="cidade">
+      <label for="uf">UF</label>
+      <input type="text" name="uf" id="uf">
+      <label for="pais">País</label>
+      <input type="text" name="pais" id="pais">
+      <label for="cep">CEP</label>
+      <input type="text" name="cep" id="cep">
+      <input type="submit" value="Salvar">
+    </form>
+  </div>
+</body>
+
+</html>
