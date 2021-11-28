@@ -1,10 +1,10 @@
 # Saiba mais javascript:
 
-## var, let e const
+## [var, let e const](#intro)
 Neste documento vamos conhecer um pouco mais sobre essas palavras chaves que utilizamos durante uma declaração de variável na programação javascript.
 
 O que será que cada uma faz?
-## class
+## [class](#class-1)
 Classes.  Peça fundamental para aplicação do conceito de programação orientada a objetos (POO). Já ouviu falar? Pois é! O javascript ouviu tanto que resolveu adotar em seu padrão... rs
 
 Bora conhecer o que são classes, seus atributos e métodos e porque devemos utiliza-las na programação javascript?
