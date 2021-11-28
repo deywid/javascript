@@ -4,7 +4,7 @@
 Neste documento vamos conhecer um pouco mais sobre essas palavras chaves que utilizamos durante uma declaração de variável na programação javascript.
 
 O que será que cada uma faz?
-## [class](#class-1)
+## [class](#intro-1)
 Classes.  Peça fundamental para aplicação do conceito de programação orientada a objetos (POO). Já ouviu falar? Pois é! O javascript ouviu tanto que resolveu adotar em seu padrão... rs
 
 Bora conhecer o que são classes, seus atributos e métodos e porque devemos utiliza-las na programação javascript?
@@ -12,7 +12,7 @@ Bora conhecer o que são classes, seus atributos e métodos e porque devemos uti
 #
 
 ### intro
-Assim que iniciei meus estudos javascript, aprendi que, para declarar variáveis, independente de tipos, uma palavra reservada específica deveria preceder o nome da nova variável.
+Logo que iniciei meus estudos javascript, aprendi que, para declarar variáveis, independente de tipos, uma palavra reservada específica deveria preceder o nome da nova variável.
 Essa palavra reservada era a **var**. 
 
 E assim o fiz durante muito tempo.
@@ -20,8 +20,8 @@ E assim o fiz durante muito tempo.
 Mesmo após o advento do ES6(ECMAScript2015), que implementou em seu padrão mais duas palavras reservadas para a declaração de variáveis, a let e const, a declaração com a var continua a ser utilizada, principalmente por quem está começando. 
 Um dos motivos pode ser a questão de **escopo**, que pode confundir logo no ínicio, mas que é essencial ser compreendido para que se entenda as diferenças entre var, let e const.
 
-> #### Escopo
->> Para uma melhor compreensão de escopo, do ponto de vista da programação, eu, particularmente, gosto de definir como _o espaço para definição de um propósito_.
+> #### escopo
+>> Para uma melhor compreensão de escopo, do ponto de vista da programação, eu, particularmente, gosto de definir como _o espaço que temos para definição de um propósito_.
 
 Agora, sabendo que meu código possui esses 'espaços' e que neles eu vou querer definir apenas o que é relacionado ao seu propósito, vamos as diferenças...
 
@@ -29,7 +29,8 @@ Agora, sabendo que meu código possui esses 'espaços' e que neles eu vou querer
 >> A var se estabelece no escopo global ou no escopo de função, e não se limita a um escopo de bloco.
 >> Em outras palavras, quando declaramos uma var em um bloco, como em um ```for(){}```, essa variável irá procurar o escopo logo acima, podendo ser o de uma função ou o global, e ali se estabelecer.
 >> Além disso, assim como ocorre com funções, a var possui uma característica interessante, a qual damos o nome de **hoisting**.
->>> #### Hoisting 
+>> 
+>>> #### hoisting 
 >>>> (içamento/elevação, em português) é o que nos permite 'executar o código antes de criar o código', ou seja, quando atribuimos valor a uma variável logo na primeira linha, mas só a declaramos na última, estamos nos valendo dessa característica.
 >>>> Ademais, o que faz var se comportar diferente de let e const nesse sentido, é que ela é inicializada como ```undefined``` até que seu valor seja lido no código.
 >> Parece útil, não é? Eu diria que para funções funciona muito bem, mas quando tratamos de variáveis, isso pode fugir do controle!
@@ -131,11 +132,65 @@ Agora, sabendo que meu código possui esses 'espaços' e que neles eu vou querer
 >>> ```
 >> Podemos incluir, alterar e até mesmo remover propriedades de um objeto ou elementos de um array, mas nunca reatribuir totalmente um novo valor.
 
-> ### Conclusão
->> Eu me perguntava qual dessas palavras reservadas deveria utilizar. A medida que fui entendendo o comportamento e características de cada uma, percebi que a escolha depende apenas das nossas necessidades e ojetivos com aquilo que estamos programando. Se é um projeto pessoal simples e trivial, não vai ter problema usar a var, não é? Agora, em um projeto complexo de alguma operação comercial, por exemplo, o uso da var pode representar riscos!
+> ### conclusão
+>> Eu me perguntava qual dessas palavras reservadas deveria utilizar. A medida que fui entendendo o comportamento e características de cada uma, percebi que a escolha depende apenas das nossas necessidades e ojetivos com aquilo que estamos programando. Se é um projeto pessoal e trivial, não vai ter problema usar a var, não é? Agora, em um projeto complexo de alguma operação comercial, por exemplo, o uso da var pode representar riscos!
 >> 
 >> Então... pra não ter erro, use a let quando for necessário reatribuir valores e const sempre que for possível, principalmente com arrays e objetos!
 
 #
-> ### Class
+
+### intro
+Como foi possível perceber análisando as diferenças de comportamento entre var, let e const, fica evidente a necessidade de se ter um código confiável e de fácil manutenção. Nesse novo contexto, exigiu-se várias soluções antes não previstas para a linguagem. A exemplo está o paradigma da programação orientada a objetos (POO) com a implementação de classes na ES6, o que corrobora com o fato de que a linguagem javascript avançou e conquistou ainda mais espaço, indo além de apenas aplicações simples na web.
+
+Bora entender o que são classes?
+
+Antes de entender o que são classes, é importante conhecer o conceito de programação orientada a objetos (POO).
+> #### POO
+>> A POO é um paradigma da programação que se baseia em Objetos virtuais para representar entidades reais, e que tenta através deles abstrair seus recursos.
 >> 
+A essa representação damos o nome de classe.
+>> 
+> ### class
+>> As classes servem como um modelo representativo às entidades reais. Nelas podemos definir atributos e métodos que correspondam aos recursos da entidade representada. A partir desse modelo fica muito mais fácil instanciar novos objetos com todas as caracteristicas inerentes a classe.
+>>
+>> Vejamos um exemplo:
+>>> ```
+>>> class Retangulo {
+>>>   constructor(altura, largura) {
+>>>     this.altura = altura;
+>>>     this.largura = largura;
+>>>   }
+>>> }
+>>> ```
+>> Acima criamos a ```class Retangulo``` com os **atributos** ```altura``` e ```largura```. Agora, a partir dessa estrura, podemos instanciar quantos retângulos quisermos. E o melhor, graças a seu ```constructor```. cada retângulo novo receberá seus próprios valores em altura e largura.
+>> 
+>> Vamos um pouco mais a fundo:
+>>> ```
+>>> class Retangulo {
+>>>   constructor(altura, largura) {
+>>>     this.altura = altura;
+>>>     this.largura = largura;
+>>>   }
+>>>   
+>>>   get area() {
+>>>     return this.calculaArea();
+>>>     }
+>>>     
+>>>   calculaArea() {
+>>>     return this.altura * this.largura;
+>>>   }
+>>> }
+>>> const quadrado = new Retangulo(10, 10);
+>>> console.log(quadrado.area); //100
+>>> ```
+>> Perceba que incluimos outros recursos à nossa estrutura de retângulos. Nosso modelo agora permite obter sua área!
+>> 
+>> Pra isso ser possível, definimos um método _getter_ e um método que faz o cálculo de fato. ```get``` e ```set``` são palavras reservadas da classe que definem certos comportamentos a seus atributos e métodos.
+>> No caso de get, ele é utilizado para se ter acesso aos recursos da classe estando fora de seu escopo. O mesmo serve para os _setters_, ou ```set```, que nos permite atribuir e reatribuir os atributos e métodos de fora do escopo da classe.
+>> 
+>> ```calculaArea()``` é nosso método. Métodos funcionam de igual forma como as já conhecidas funções. São eles que definem as ações e comportamentos característicos da classe.
+
+> ### conclusão
+>> Programar com o uso de classes pode ser confuso no início. Com tempo, conhecimento e entendimento de todos os coceitos de POO, o uso de classes pode ser muito útil, e se bem aplicado ao projeto, torna tudo muito mais intuitivo e confiável.
+>> 
+>> A POO também nos oferece recursos que podem aumentar a produtividade, ainda que passe a impressão de ser mais burocrática quando aplicado o encapsulamento dos membros, os conceitos de herança e polimorfismo nos ajudam bastante quando em um contexto de multi Objetos.
