@@ -73,26 +73,4 @@ const STAR_WARS =
   "gender": "male"
 }]
 
-const personagensSemGeneroDefinido = STAR_WARS.filter(pers => pers.gender === "n/a");
-
-const personagemMassaMenor30 = STAR_WARS.filter(pers => pers.mass < 30);
-
-const totalMassa = STAR_WARS.reduce((total, atual) => {
-  return total + Number(atual.mass);
-}, 0);
-const mediaMassa = totalMassa / STAR_WARS.length;
-
-const totalAltura = STAR_WARS.reduce((total, atual) => {
-  return total + Number(atual.height);
-}, 0);
-const mediaAltura = totalAltura / STAR_WARS.length; 
-
-const primeiroPersonagemFem = STAR_WARS.find(pers => pers.gender === "female");
-
-const listaPersonagemAlturaMaior150 = STAR_WARS.filter(pers => pers.height > 150);
-
-const homens = STAR_WARS.filter(pers => pers.gender === "male" && pers.mass > 50);
-const totalAlturaHomens = homens.reduce((total, atual) => {
-    return total + Number(atual.height)
-}, 0);
-const mediaAlturaHomens = Math.floor(totalAlturaHomens / homens.length);
+export default STAR_WARS;

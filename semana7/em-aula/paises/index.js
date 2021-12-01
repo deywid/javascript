@@ -1,3 +1,4 @@
+/* array helper methods */
 import PAISES from "./modules/paises.js";
 import {
   somarArea,
