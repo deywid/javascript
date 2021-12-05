@@ -1,0 +1,58 @@
+input[type="checkbox"] {
+  appearance: none;
+  width: 1.2em;
+  height: 1.2em;
+  border: .1em solid tomato;
+  border-radius: 0.15em;
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.85em;
+  height: 0.85em;
+  clip-path: polygon(30% 40%, 0 55%, 50% 90%, 100% 0, 100% 0%, 45% 60%);
+  transform: scale(0);
+  transform-origin: top right;
+  transition: 120ms transform ease-in-out;
+  background-color: tomato;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:focus {
+  outline: tomato dashed .1em;
+  border-width: .1em;
+}
+
+label {
+  font-size: 1.1em;
+  display: grid;
+  grid-template-columns: 0 auto;
+  gap: 1.5em;
+}
+
+label[for="checkbox"] {
+  cursor: pointer;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* textarea::-webkit-scrollbar {
+  display: none;
+} */
