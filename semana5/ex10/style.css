@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 10vh;
+}
+
+.produto {
+  width: 200px;
+  height: 300px;
+  background-color: beige;
+  padding: 16px;
+}
+
+.product-nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.produto img {
+  width: 100%;
+  height: 150px;
+  background-position: center;
+}
