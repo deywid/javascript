@@ -31,9 +31,9 @@ class Transacoes extends Conta {
 const conta = new Conta("003999-2", 500);
 const transacao1 = new Transacoes(conta, 200);
 const transacao2 = new Transacoes(conta, 350);
-console.log("transf", transf.toJSON())
+console.log("transf", transacao1.toJSON())
 transacao1.transferencia(conta)
-console.log("deposit", deposito.toJSON())
+console.log("deposit", transacao2.toJSON())
 transacao2.deposito(conta)
 
 console.log("extrato: ", conta.toJSON())
