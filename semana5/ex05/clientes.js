@@ -1,6 +1,6 @@
 import Enderecos from "../ex04/Enderecos.js"
 
-class Clientes {
+export default class Clientes {
   #nome
   #cpf
   #telefone

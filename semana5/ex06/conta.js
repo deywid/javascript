@@ -1,7 +1,7 @@
 import Enderecos from "../ex04/Enderecos.js"
 import Clientes from "../ex05/clientes.js"
 
-class Conta extends Clientes {
+export default class Conta extends Clientes {
 #numConta
 #saldo
 
