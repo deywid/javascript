@@ -1,17 +1,20 @@
 import './App.css'
-import Square from './components/square'
-import Circle from './components/circle'
-import CapsLock from './components/capslock'
+import Figures from './components/Figure'
 
 function App() {
   return (
     <>
-      <Square title='quadrado' />
-      <Square background="violet" title='quadrado' />
-      <Circle background="yellow" title='circulo' />
-      <Circle title='circulo' />
+      <Figures type="square" title="Quadrado"
+        bg="yellow" />
 
-      <CapsLock texto="me deixe em capslock" />
+      <Figures type="triangle" title="Triangulo"
+        bg="red" />
+
+      <Figures type="circle" title="Circulo"
+        bg="blue" />
+
+      <Figures type="rectangle" title="Retangulo"
+      />
     </>
   )
 }

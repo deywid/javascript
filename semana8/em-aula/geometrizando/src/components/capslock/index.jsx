@@ -1,5 +1,5 @@
-function CapsLock({texto}){
-  const textoEmCaps = texto.toUpperCase();
+function CapsLock({ children }) {
+  const textoEmCaps = children.toUpperCase();
   return (
     <span>{textoEmCaps}</span>
   )

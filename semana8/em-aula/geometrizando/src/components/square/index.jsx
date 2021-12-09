@@ -1,11 +1,5 @@
-export default function Square(props) {
-  const titulo = props.title
-  return (
-    <>
-    <span>{titulo}</span>
-    <div style={
-      {background: props.background}
-    } className="square"></div>
-    </>
-  )
+function Square({ bg }) {
+  return <div style={{ background: bg }} className="square"></div>
 }
+
+export default Square

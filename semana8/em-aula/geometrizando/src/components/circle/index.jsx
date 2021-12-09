@@ -1,12 +1,5 @@
-function Circle({background, title}){
-  return (
-    <>
-    <span>{title}</span>
-    <div style={
-      {background: background}
-      } className="circle"></div>
-    </>
-  )
+function Circle({ bg }) {
+  return <div style={{ background: bg }} className="circle"></div>
 }
 
 export default Circle;
