@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  width: 100vw;
+  height: 100vh;
+  background-color:rgb(115, 110, 185)
+}
+
+.circulo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgb(236, 233, 11);
+}
