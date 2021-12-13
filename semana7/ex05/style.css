@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 30vh;
+  background-color: #fff;
+}
+
+.progress-bar{
+  --progress: 90;
+    width: 300px;
+    height: 32px;
+    padding: 0 16px;
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 32%) 0px 0px 4px 0px inset, rgb(0 0 0 / 64%) 0px -12px 12px 0px inset, rgb(0 0 0 / 40%) 0px 4px 2px;
+    display: flex;
+    align-items: center;
+}
+
+.progress-bar::before{
+  content: "";
+  width: calc(var(--progress) * 1%);
+  height: 12px;
+  border-radius: 4px;
+  background-color: hsl( calc(var(--progress) * 1.2) , 80%, 50%);
+  box-shadow: rgb(255 255 255 / 64%) 0px 0px 1px 1px inset;
+  transition: all 0.2s ease;
+}
+
+.progress-msg {
+  font-weight: 700;
+  animation: blink .2s;
+  animation-iteration-count: 3;
+}
+
+@keyframes blink {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
