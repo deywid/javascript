@@ -1,6 +1,7 @@
-## em-aula
-> segunda semana de estudos em REACT
-praticando criação de componentes, conditional rendering e useState
+## Segunda semana de estudos em REACT
+
+Praticando a criação de componentes, conditional rendering e useState
+
 
 #
 
