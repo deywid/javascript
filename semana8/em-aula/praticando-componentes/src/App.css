@@ -1,0 +1,13 @@
+button {
+  all: unset;
+}
+
+.lesstext-btn {
+  font-style: italic;
+  font-size: small;
+  margin-left: 4px;
+}
+
+.lesstext-btn:hover {
+  text-decoration: underline;
+}
